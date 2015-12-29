@@ -1,0 +1,8 @@
+﻿
+@model IEnumerable<webapp.Models.GuestResponse>
+    @{ 
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+@if (Model.Count() == 1)
+{    <p>You are the first to accept! Hurrah!</p> }
+else {    <p>Here is the list of cool people coming: @string.Join(", ", Model.Select(x => x.Name))</p> }
